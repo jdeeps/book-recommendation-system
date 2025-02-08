@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Book Recommender</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="../static/css/user2_style.css">
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+        <a class="navbar-brand" href="/">Home</a>
+      </div>
+    </div>
+  </nav>
+
+
+{% if n != undefined %}
+<div class="container">
+<div class="row"> 
+  {% for i in range(0,n) %}
+    <div class="column">
+      <img src={{recommendations['image_url'][i]}}><br>
+      <a style="color:rgb(58, 65, 198)" href={{recommendations['isbn'][i]}}>{{recommendations['title'][i]}}</a>
+      <table>
+        <tr>
+          <td><h6 style="color:rgb(177, 166, 166)">Author:</td>
+          <td><h6 style="color:rgb(49, 33, 33)">{{recommendations['author'][i]}}</td>
+        </tr>
+        <tr>
+          <td><h6 style="color:rgb(177, 166, 166)">Rating:</td>
+          <td><h6 style="color:rgb(49, 33, 33)">{{recommendations['rating'][i]}}</td>
+        </tr>
+        <tr>
+          <td><h6 style="color:rgb(177, 166, 166)">Total number of usrers rated:</td>
+          <td><h6 style="color:rgb(49, 33, 33)">{{recommendations['users_rated'][i]}}</td>
+        </tr>
+        <tr>
+          <td><h6 style="color:rgb(177, 166, 166)">Publisher:</td>
+          <td><h6 style="color:rgb(49, 33, 33)">{{recommendations['publisher'][i]}}</h6></td>
+        </tr>
+        </table>
+    </div>
+  {% endfor %}
+</div>
+</div>
+{% endif %}
+</body>
+</html>

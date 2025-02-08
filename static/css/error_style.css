@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  body, html {
+    height: 100%;
+  }
+  
+  .container{
+    background-image: url("../error3.webp");
+    /* Full height */
+    height: 100%; 
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: conatin;
+  }
+  .head-text{
+    font-family : 'Quicksand', sans-serif ;
+    color          : #fff;
+    font-size      : 40px                ;
+   /* position       : relative            ;*/
+    font-weight    : bold                ;
+    letter-spacing : 3px                 ;
+    padding        : 10px 0 20px 0       ;
+    text-align: center;
+  }

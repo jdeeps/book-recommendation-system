@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="../static/css/result_style.css">
+</head>
+<body>
+	<div class="container">
+		<h3 class="head-text">GoodBooks Recommender</h3>
+		<hr style="height:2px;border-width:0;color:rgb(90, 85, 85);background-color:rgb(90, 85, 85)">
+		<hr style="height:2px;border-width:0;color:rgb(90, 85, 85);background-color:rgb(90, 85, 85)">
+		<div class="row">
+			{% for i in range(n) %}
+				<div class="column">
+					<div>
+						<img src={{recommendations['image_url'][i]}}>
+					</div>
+					<div>
+						<a style="color:rgb(58, 65, 198)" href={{recommendations['id'][i]}}>{{recommendations['title'][i]}} by {{recommendations['author'][i]}}</a>
+					</div>
+					<div>
+						<h4 style="color:rgb(108, 24, 24)">{{recommendations['rating'][i]}}/5.0</h4>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+</body>
+</html>

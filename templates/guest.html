@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Book Recommender</title>
+    <!--google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,600,700&display=swap&subset=latin-ext,vietnamese" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/style.css">
+
+  </head>
+  <body>
+    <div class="container">
+      <h3 class="head-text">GoodBooks Recommender</h3>
+      <hr style="height:2px;border-width:0;color:gray;background-color:gray">
+      <hr style="height:2px;border-width:0;color:gray;background-color:gray">
+        <div class="slide-content">   
+          <form action="{{ url_for('userrecommendations') }}" method="post">          
+                <input type="text" name="title" class="form-control" id="validationCustom01" placeholder="Book Title" value="" required><br>         
+                <button class="btn btn-primary btn-sbmit" type="submit">Recommend</button>
+          </form>
+        </div>
+  </div>
+  </body>
+</html>
