@@ -125,4 +125,4 @@ These metrics were used to select the best matrix factorization method for the f
 
 ---
 
-*DATA 240 — Team 3*
+
